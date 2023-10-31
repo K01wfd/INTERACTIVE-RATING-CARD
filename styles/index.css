@@ -65,8 +65,10 @@ main {
   background: var(--card-bg);
   border-radius: 1.5rem;
   padding: 3.2rem 2.4rem;
-  display: grid;
   display: none;
+}
+.rating-card.show-rating {
+  display: grid;
 }
 .star-box {
   width: 48px;
@@ -88,17 +90,18 @@ main {
 }
 .rating-scores {
   margin-bottom: 3.2rem;
+
   display: flex;
-  align-items: center;
-  column-gap: 2.1rem;
+  gap: 2.1rem;
 }
 .score {
   background: var(--score-bg);
   color: var(--score-fg);
   width: 51px;
   height: 51px;
-  display: grid;
-  place-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: 700;
   border-radius: 50%;
   cursor: pointer;
@@ -108,7 +111,7 @@ main {
   background: var(--Orange);
   color: var(--White);
 }
-.score.active {
+.active-score {
   background-color: var(--score-fg);
   color: var(--White);
 }
@@ -132,8 +135,11 @@ main {
   background: var(--card-bg);
   border-radius: 1.5rem;
   padding: 3.2rem 2.4rem;
-  display: grid;
   text-align: center;
+  display: none;
+}
+.thankyou-card.showThankyou {
+  display: grid;
 }
 .thankyou-card img {
   max-width: 162px;
@@ -154,6 +160,9 @@ main {
   margin-bottom: 0.7rem;
 }
 @media (max-width: 425px) {
+  body {
+    height: 85vh;
+  }
   .rating-text {
     margin-top: 1.6rem;
   }
@@ -161,7 +170,7 @@ main {
     margin-bottom: 1rem;
   }
   .rating-scores {
-    column-gap: 1.7rem;
+    column-gap: 1.4rem;
   }
   .rating-scores {
     margin-bottom: 2.4rem;
